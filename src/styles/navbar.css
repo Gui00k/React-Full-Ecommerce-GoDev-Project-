@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  background-color: skyblue;
+}
+
+.desktop {
+  display: none;
+}
+
+.note {
+  display: inherit;
+}
+
+.search-container {
+  background-color: transparent;
+}
+
+@media(min-width:1300px) {
+  .desktop {
+    display: inherit;
+  }
+
+  .note {
+    display: none;
+  }
+
+  .search-container {
+    display: flex;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 30px;
+    background-color: white;
+  }
+}
+
+.user {
+  margin-left: 10px;
+}
+
+.nav_box {
+  max-width: 95%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.my_shop {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  font-family: cursive;
+  cursor: pointer;
+}
+
+.Collection-container {
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.Collection-container a {
+  padding-left: 20px;
+  cursor: pointer;
+  color: #000;
+}
+
+/* .Collection-container a:hover {
+  background-color: rgb(67, 183, 230);
+  border-radius: 5px;
+  transition: 1s all ease;
+} */
+
+.Collection-container a:nth-child(1) {
+  padding-right: 20px;
+}
+
+
+.search-container a {
+  color: gray;
+  padding: 2px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.search-container input {
+  background-color: transparent;
+  width: 95%;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  padding: 1px;
+}
+
+.user-container {
+  display: flex;
+  font-size: 16px;
+  padding: 20px;
+}
+
+.user-container a {
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+.user-container .menuBtn {
+  background-color: white;
+  border-radius: 5px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.user-container .menuBtn:hover {
+  background-color: #444;
+  border-radius: 5px;
+  padding: 2px;
+  color: white;
+}
+
+.cart {
+  cursor: pointer;
+  display: flex;
+  padding-left: 40%;
+}
+
+.cart span:nth-child(1) {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.cart span:nth-child(2) {
+  height: 20px;
+  width: 15px;
+  padding: 0 3px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  position: relative;
+
+}
+
+/*bottom-header*/
+.bottom-header {
+  background-color: rgb(23, 175, 235);
+  padding: 4px 24px 4px;
+  border-bottom: 1px solid rgb(23, 175, 235);
+}
+
+.bottom-header h3 {
+  font-size: 18px;
+  color: #fff;
+  transition: color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+.bottom-header-inner {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-header-inner h3 {
+  font-weight: 600;
+}
+
+@media(max-width:870px) {
+  .bottom-header h3 {
+    font-size: 14px;
+  }
+}
+
+/*Hamburguer menu*/
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.burger-menu {
+  height: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.burger-bar {
+  width: 120px;
+  height: 15px;
+  background-color: white;
+  border-radius: 0.5em;
+}
+
+.menu {
+  width: 50%;
+  height: 100vh;
+  background-color: gray;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  float: right;
+  text-align: center;
+  position: relative;
+
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inherit;
+}
+
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(0.75em, 1.25em);
+  transition: ease-in-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2) {
+  transform: scale(0);
+  transition: ease-in-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+  transform: rotate(135deg) translate(-0.5em, 1em);
+  transition: ease-in-out 0.5s;
+}
+
+.burger-bar.unclicked {
+  transform: rotate(0deg) translate(0);
+  transition: ease-in-out 0.5s;
+}
+
+.listItems {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  color: white;
+  z-index: 10;
+  flex-direction: column;
+  padding-top: 20px;
+  font-size: 26px;
+}
+
+.listItems .list {
+  padding: 14px;
+}
+
+.listItems .list a {
+  color: aliceblue;
+  font-weight: 200;
+  cursor: pointer;
+}
